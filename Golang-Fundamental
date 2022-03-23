@@ -1,1 +1,21 @@
-package main 
+C2.1 main.go
+package main
+
+import "fmt"
+
+func main() {
+	message := "hello Go world"
+	fmt.Println(message)
+}
+
+C2.2 main.go
+package main
+
+import "fmt"
+
+func main() {
+	message := "hello Go world"
+	fmt.Println(message)
+	message = "Hello Go world, Wonderfully"
+	fmt.Println(message)
+}
