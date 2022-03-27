@@ -19,3 +19,433 @@ func main() {
 	message = "Hello Go world, Wonderfully"
 	fmt.Println(message)
 }
+
+C2.3 main.go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	name := "Peter"
+	fmt.Println(strings.ToLower(name))
+}
+
+C2.4 main.go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	name := "peter"
+	phone := "13000000000"
+	user := name + " " + phone
+	fmt.Println(user)
+
+}
+
+C2.5 main.go
+ackage main
+
+import (
+	"bytes"
+	"fmt"
+	"strings"
+)
+
+func main() {
+
+	name := "peter"
+	phone := "13000000000"
+	user := name + " " + phone
+	fmt.Println(user)
+
+	user1 := strings.Join([]string{"hello", "world"}, " ")
+	fmt.Println(user1)
+
+	user2 := fmt.Sprintf("%s:%s", name, phone)
+	fmt.Println(user2)
+
+	user3 := bytes.Buffer{}
+	user3.WriteString("hello")
+	user3.WriteString(" world")
+	fmt.Println(user3.String())
+
+}
+
+C2.6 main.go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	message := "hello Go world"
+	fmt.Println(message)
+	fmt.Println("\t"+message)
+
+	foods := "清蒸鱼\n红烧肉\n鱼香肉丝"
+    fmt.Println(foods)
+
+	foods2 := "您选择的菜品：\n\t清蒸鱼\n\t红烧肉\n\t鱼香肉丝"
+	fmt.Println(foods2)
+
+}
+
+C2.7 main.go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	message := "人生若只如初见"
+	fmt.Println(message)
+	message1 := "何事秋风悲画扇"
+	fmt.Println("\t"+message1)
+	message2 := "等闲变却故人心"
+	fmt.Println("\t\t"+message2)
+	message3 := "却道故心人易变"
+	fmt.Println("\t\t\t"+message3)
+	message4 := "骊山语罢清宵半"
+	fmt.Println("\t\t\t\t"+message4)
+	message5 := "泪雨霖铃终不怨"
+	fmt.Println("\t\t\t\t\t"+message5)
+	message6 := "何如薄幸锦衣郎"
+	fmt.Println("\t\t\t\t\t\t"+message6)
+	message7 := "比翼连枝当日愿"
+	fmt.Println("\t\t\t\t\t\t\t"+message7)
+
+
+}
+
+C2.8 main.go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(3 + 4)
+
+	fmt.Println(10 - 3)
+
+	fmt.Println(2 * 3)
+
+	fmt.Println(9 / 3)
+
+	fmt.Println(1 + 2*3)
+
+	fmt.Println((1 + 2) * 3)
+}
+
+C2.9 main.go
+package main
+
+import (
+"fmt"
+"math"
+)
+
+func main() {
+	fmt.Println(math.MaxFloat32)
+	fmt.Println(math.MaxFloat64)
+}
+
+C2.10 main.go
+package main
+
+import (
+"fmt"
+"strconv"
+)
+
+func main() {
+	age := 23
+	fmt.Println("我的年龄是:" + strconv.Itoa(age))
+
+}
+
+C2.11 main.go
+package main
+
+import (
+"fmt"
+"strings"
+)
+
+func main() {
+	// 提供的主食如下
+	foods4:="米饭，馒头，面条"
+	result:=strings.Trim(foods4,"米饭")
+	fmt.Println(result)
+
+}
+
+C3.1 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var list [5]string
+	fmt.Println(list)
+
+	var list2 = [5]string{
+		"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
+	}
+	fmt.Println(list2)
+
+	list3 := [5]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝"}
+	fmt.Println(list3)
+
+	list4 := [...]string{"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝"}
+	fmt.Println(list4)
+
+	var list5 = [3]string{"米饭", "馒头", "包子"}
+	//list5=list4
+	fmt.Println(list5)
+
+	fmt.Println(list2 == list4)
+}
+
+C3.2 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var list2 = [5]string{
+		"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
+	}
+	fmt.Println(list2[0])
+}
+
+C3.3 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var list2 = [5]string{
+		"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
+	}
+	fmt.Println(list2[2])
+}
+
+C3.4 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var list = [5]string{
+		"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
+	}
+	message := "我点一个菜" + list[1]
+	fmt.Println(message)
+}
+
+C3.5 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var list = [5]string{
+		"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝",
+	}
+	for idx, item := range list {
+		desc := fmt.Sprintf("%d-%s", idx, item)
+		fmt.Println(desc)
+	}
+}
+
+C3.6 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var list = [3]string{"米饭", "馒头", "包子"}
+	list[0] = "饺子"
+	fmt.Println(list)
+}
+
+C3.7 main.go
+package main
+
+func main() {
+	//var list = [5]string{
+	//	"红烧肉", "清蒸鱼", "溜大虾", "蒸螃蟹", "蒜蓉粉丝扇贝"
+	//}
+	//fmt.Println(list)
+	//fmt.Println(list[5])
+}
+
+C4.11 main.go
+package main
+
+import "fmt"
+
+func main(){
+	var foods =[5]string{"A","B","C","D","E"}
+	var foodsSlice []string = foods[3:]
+	fmt.Println(foodsSlice)
+}
+
+C4.12 main.go
+package main
+
+import "fmt"
+
+func main() {
+   var foodsSlice2 = []string{"A", "B", "C", "D", "E"}
+   fmt.Println(foodsSlice2)
+}
+C4.2 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var foods = [5]string{"A", "B", "C", "D", "E"}
+	var foodsSlice []string = foods[0:3]
+	fmt.Println(foodsSlice)
+	fmt.Println(foods[1:4])
+	fmt.Println(foods[:2])
+	fmt.Println(foods[3:])
+
+	var foodsSlice2 = []string{"A", "B", "C", "D", "E"}
+
+	foodsSlice5 := foodsSlice2[1:4]
+	fmt.Println(len(foodsSlice5))
+	fmt.Println(cap(foodsSlice5))
+	foodSlice4 := []string{"A"}
+	fmt.Println(foodSlice4)
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+
+	foodSlice4 = append(foodSlice4, "B")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+	foodSlice4 = append(foodSlice4, "C")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+	foodSlice4 = append(foodSlice4, "D")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+	foodSlice4 = append(foodSlice4, "E")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+}
+
+C4.3 main.go
+package main
+
+import "fmt"
+
+func main() {
+	foods := []string{"A", "B", "C", "D", "E"}
+	foods2 := make([]*string, len(foods))
+	for i, _ := range foods {
+		foods2[i] = &foods[i]
+	}
+	fmt.Println(foods[0], foods[1], foods[2], foods[3], foods[4])
+	fmt.Println(*foods2[0], *foods2[1], *foods2[2], *foods2[3], *foods2[4])
+}
+
+C4.5 main.go
+package main
+
+import "fmt"
+
+func main() {
+	var foodsSlice2 = []string{"A", "B", "C", "D", "E"}
+	foodsSlice5 := foodsSlice2[1:4]
+	fmt.Println(len(foodsSlice5))
+	fmt.Println(cap(foodsSlice5))
+	foodSlice4 := []string{"A"}
+	fmt.Println(foodSlice4)
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+
+	foodSlice4 = append(foodSlice4, "B")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+	foodSlice4 = append(foodSlice4, "C")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+	foodSlice4 = append(foodSlice4, "D")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+	foodSlice4 = append(foodSlice4, "E")
+	fmt.Println(fmt.Sprintf("Len:%d", len(foodSlice4)))
+	fmt.Println(fmt.Sprintf("Cap:%d", cap(foodSlice4)))
+}
+
+C4.6 main.go
+package main
+
+import "fmt"
+
+func main() {
+	foods := make([]string, 10, 12)
+	foods[0] = "A"
+	foods[1] = "B"
+	foods[2] = "C"
+	foods[3] = "D"
+	foods[4] = "E"
+	foods[5] = "F"
+	foods[6] = "G"
+	foods[7] = "H"
+	last := foods [len(foods)-1]
+	fmt.Println(last)
+}
+
+C4.7 main.go
+package main
+
+import "fmt"
+
+func main(){
+	foods :=make([]string,8,10)
+	foods[0]="A"
+	foods[1]="B"
+	foods[2]="C"
+	foods[3]="D"
+	foods[4]="E"
+	foods[5]="F"
+	foods[6]="G"
+	for idx,item:=range foods{
+		fmt.Println(idx)
+		fmt.Println(item)
+		fmt.Println("------")
+	}
+}
+
+C5.1 main.go
+package main
+
+import "fmt"
+
+func main() {
+	foods := []string{"A", "B", "C", "D", "E"}
+	for _, item := range foods {
+		if item == "A" {
+			fmt.Println("A is selling for free today")
+		} else {
+			fmt.Println(item)
+		}
+	}
+}
+
+C5.2 main.go
